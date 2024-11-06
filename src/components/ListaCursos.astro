@@ -1,49 +1,131 @@
 ---
 const categorias = [
 	{
-		nombre: 'Desarrollo Web',
-		descripcion:
-			'Artículos sobre desarrollo web, desde HTML, CSS, JavaScript, hasta frameworks y librerías populares.',
+		id: 1,
+		nombre: 'Taller de introducción a la programación',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 4,
+		semanas: 4,
+		diasPorSemana: 2,
+		descripcion: 'Curso introductorio para aprender los fundamentos de la programación.',
 	},
 	{
-		nombre: 'Desarrollo Móvil',
-		descripcion: 'Artículos sobre desarrollo móvil, desde aplicaciones nativas hasta híbridas.',
+		id: 2,
+		nombre: 'Seguridad en línea y privacidad',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 4,
+		semanas: 4,
+		diasPorSemana: 2,
+		descripcion:
+			'Curso para conocer los conceptos básicos de seguridad en Internet y protección de la privacidad.',
 	},
 	{
-		nombre: 'Diseño',
-		descripcion:
-			'Artículos sobre diseño, desde diseño gráfico, diseño web, hasta diseño de interfaces.',
+		id: 3,
+		nombre: 'Uso de herramientas digitales para negocios',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 4,
+		semanas: 4,
+		diasPorSemana: 2,
+		descripcion: 'Capacitación en herramientas digitales esenciales para la gestión de negocios.',
 	},
 	{
-		nombre: 'Marketing',
+		id: 4,
+		nombre: 'Manejo de redes sociales para negocios',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 5,
+		semanas: 4,
+		diasPorSemana: 2,
 		descripcion:
-			'Artículos sobre marketing, desde marketing digital, marketing de contenidos, hasta SEO y SEM.',
+			'Curso para aprender a gestionar redes sociales de manera efectiva en el ámbito empresarial.',
 	},
 	{
-		nombre: 'Negocios',
+		id: 5,
+		nombre: 'Electrónica Básica',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 4,
+		semanas: 4,
+		diasPorSemana: 3,
 		descripcion:
-			'Artículos sobre negocios, desde emprendimiento, startups, hasta finanzas y administración.',
+			'Introducción a los conceptos básicos y componentes fundamentales de la electrónica.',
 	},
 	{
-		nombre: 'Tecnología',
+		id: 6,
+		nombre: 'Ofimática Básica',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 5,
+		semanas: 5,
+		diasPorSemana: 2,
 		descripcion:
-			'Artículos sobre tecnología, desde gadgets, hardware, software, hasta inteligencia artificial y machine learning.',
+			'Curso para desarrollar habilidades en el uso de herramientas de ofimática como procesadores de texto y hojas de cálculo.',
 	},
 	{
-		nombre: 'Seguridad en línea y privacidad.',
+		id: 7,
+		nombre: 'Gestión de energía doméstica',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 5,
+		semanas: 5,
+		diasPorSemana: 3,
 		descripcion:
-			'Artículos sobre tecnología, desde gadgets, hardware, software, hasta inteligencia artificial y machine learning.',
+			'Aprende técnicas para optimizar el consumo energético en el hogar de manera eficiente.',
+	},
+	{
+		id: 8,
+		nombre: 'Educación vial en línea',
+		fechaInicio: '3/11/2024',
+		fechaFinalizacion: '7/12/2024',
+		duracionEnHoras: 5,
+		semanas: 5,
+		diasPorSemana: 2,
+		descripcion:
+			'Curso en línea para aprender las normas de educación vial y seguridad en las vías.',
 	},
 ];
 ---
 
-<div class='flex flex-wrap justify-center items-center gap-6'>
+<div class='flex flex-wrap justify-center items-center gap-12
+			max-sm:gap-2'>
 	{
 		categorias.map((categoria) => (
-			<div class='bg-gray-300 p-4 rounded-lg shadow-lg w-[400px] hover:cursor-pointer hover:scale-110 transition-all ease-out duration-400'>
+			<div
+				class=' max-w-[290px] pb-6 overflow-hidden flex flex-col justify-between bg-[#23425e] rounded-lg shadow-xl 
+				hover:cursor-pointer hover:scale-110
+				transition-all ease-out duration-300
+				max-sm:max-w-[210px]'>
+				<img src='INTRODUCCIÓN.png' alt='' class='mb-4' />
+				<h2
+					class='text-2xl font-bold text-[#f0f0f0] m-4
+							max-sm:text-[16px]'>
+					{categoria.nombre}
+				</h2>
+				{/* <p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>
+					Fecha de inicio: {categoria.fechaInicio}
+				</p>
+				<p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>
+					Fecha de finalización: {categoria.fechaFinalizacion}
+				</p> */}
+				<p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>{categoria.descripcion}</p>
+			</div>
+		))
+	}
+</div>
+<!-- <div class='flex flex-wrap justify-center items-center gap-12'>
+	{
+		categorias.map((categoria) => (
+			<div
+				class='z-10 max-w-[250px] max-h-[250px]  overflow-hidden flex flex-col justify-between bg-gray-300 p-4 rounded-lg shadow-lg 
+				hover:cursor-pointer hover:scale-110 hover:max-h-[1000px] hover:z-20
+				transition-all ease-out duration-400'>
+				<img src='INTRODUCCIÓN.png' alt='' class='mb-4' />
 				<h2 class='text-2xl font-bold text-blue-500'>{categoria.nombre}</h2>
 				<p class='text-gray-700'>{categoria.descripcion}</p>
 			</div>
 		))
 	}
-</div>
+</div> -->

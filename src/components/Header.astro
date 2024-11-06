@@ -9,13 +9,13 @@ const enlaces = [
 <header class='mt-4 flex justify-around mb-6'>
 	<div class='flex justify-center items-center gap-8'>
 		<img src='logo.png' alt='' class='w-[100px]' />
-		<h1 class='text-4xl bold'>ConectaT</h1>
+		<h1 class='text-4xl bold text-[#ffffff]'>ConectaT</h1>
 	</div>
 	<nav class='flex justify-center items-center gap-20'>
 		{
 			enlaces.map((enlace) => {
 				return (
-					<a href={enlace.href} class='text-blue-500 hover:text-blue-700 text-[1.3em]'>
+					<a href={enlace.href} class='text-[#ffffff] hover:text-blue-700 text-[1.3em]'>
 						{enlace.texto}
 					</a>
 				);
