@@ -1,0 +1,49 @@
+---
+const categorias = [
+	{
+		nombre: 'Desarrollo Web',
+		descripcion:
+			'Artículos sobre desarrollo web, desde HTML, CSS, JavaScript, hasta frameworks y librerías populares.',
+	},
+	{
+		nombre: 'Desarrollo Móvil',
+		descripcion: 'Artículos sobre desarrollo móvil, desde aplicaciones nativas hasta híbridas.',
+	},
+	{
+		nombre: 'Diseño',
+		descripcion:
+			'Artículos sobre diseño, desde diseño gráfico, diseño web, hasta diseño de interfaces.',
+	},
+	{
+		nombre: 'Marketing',
+		descripcion:
+			'Artículos sobre marketing, desde marketing digital, marketing de contenidos, hasta SEO y SEM.',
+	},
+	{
+		nombre: 'Negocios',
+		descripcion:
+			'Artículos sobre negocios, desde emprendimiento, startups, hasta finanzas y administración.',
+	},
+	{
+		nombre: 'Tecnología',
+		descripcion:
+			'Artículos sobre tecnología, desde gadgets, hardware, software, hasta inteligencia artificial y machine learning.',
+	},
+	{
+		nombre: 'Seguridad en línea y privacidad.',
+		descripcion:
+			'Artículos sobre tecnología, desde gadgets, hardware, software, hasta inteligencia artificial y machine learning.',
+	},
+];
+---
+
+<div class='flex flex-wrap justify-center items-center gap-6'>
+	{
+		categorias.map((categoria) => (
+			<div class='bg-gray-300 p-4 rounded-lg shadow-lg w-[400px] hover:cursor-pointer hover:scale-110 transition-all ease-out duration-400'>
+				<h2 class='text-2xl font-bold text-blue-500'>{categoria.nombre}</h2>
+				<p class='text-gray-700'>{categoria.descripcion}</p>
+			</div>
+		))
+	}
+</div>
