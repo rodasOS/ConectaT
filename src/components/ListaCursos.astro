@@ -98,34 +98,14 @@ const categorias = [
 				hover:cursor-pointer hover:scale-110
 				transition-all ease-out duration-300
 				max-sm:max-w-[210px]'>
-				<img src='INTRODUCCIÓN.png' alt='' class='mb-4' />
+				<img src='INTRODUCCIÓN.png' alt='' class='mb-4 aspect-[500/500]' />
 				<h2
 					class='text-2xl font-bold text-[#f0f0f0] m-4
 							max-sm:text-[16px]'>
 					{categoria.nombre}
 				</h2>
-				{/* <p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>
-					Fecha de inicio: {categoria.fechaInicio}
-				</p>
-				<p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>
-					Fecha de finalización: {categoria.fechaFinalizacion}
-				</p> */}
 				<p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>{categoria.descripcion}</p>
 			</div>
 		))
 	}
 </div>
-<!-- <div class='flex flex-wrap justify-center items-center gap-12'>
-	{
-		categorias.map((categoria) => (
-			<div
-				class='z-10 max-w-[250px] max-h-[250px]  overflow-hidden flex flex-col justify-between bg-gray-300 p-4 rounded-lg shadow-lg 
-				hover:cursor-pointer hover:scale-110 hover:max-h-[1000px] hover:z-20
-				transition-all ease-out duration-400'>
-				<img src='INTRODUCCIÓN.png' alt='' class='mb-4' />
-				<h2 class='text-2xl font-bold text-blue-500'>{categoria.nombre}</h2>
-				<p class='text-gray-700'>{categoria.descripcion}</p>
-			</div>
-		))
-	}
-</div> -->
