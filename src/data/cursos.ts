@@ -1,5 +1,4 @@
----
-const categorias = [
+export const cursos = [
 	{
 		id: 1,
 		nombre: 'Taller de introducción a la programación',
@@ -9,6 +8,7 @@ const categorias = [
 		semanas: 4,
 		diasPorSemana: 2,
 		descripcion: 'Curso introductorio para aprender los fundamentos de la programación.',
+		url: 'taller-de-introduccion-a-la-programacion',
 	},
 	{
 		id: 2,
@@ -20,6 +20,7 @@ const categorias = [
 		diasPorSemana: 2,
 		descripcion:
 			'Curso para conocer los conceptos básicos de seguridad en Internet y protección de la privacidad.',
+		url: 'seguridad-en-linea-y-privacidad',
 	},
 	{
 		id: 3,
@@ -30,6 +31,7 @@ const categorias = [
 		semanas: 4,
 		diasPorSemana: 2,
 		descripcion: 'Capacitación en herramientas digitales esenciales para la gestión de negocios.',
+		url: 'uso-de-herramientas-digitales-para-negocios',
 	},
 	{
 		id: 4,
@@ -41,6 +43,7 @@ const categorias = [
 		diasPorSemana: 2,
 		descripcion:
 			'Curso para aprender a gestionar redes sociales de manera efectiva en el ámbito empresarial.',
+		url: 'manejo-de-redes-sociales-para-negocios',
 	},
 	{
 		id: 5,
@@ -52,6 +55,7 @@ const categorias = [
 		diasPorSemana: 3,
 		descripcion:
 			'Introducción a los conceptos básicos y componentes fundamentales de la electrónica.',
+		url: 'electronica-basica',
 	},
 	{
 		id: 6,
@@ -63,6 +67,7 @@ const categorias = [
 		diasPorSemana: 2,
 		descripcion:
 			'Curso para desarrollar habilidades en el uso de herramientas de ofimática como procesadores de texto y hojas de cálculo.',
+		url: 'ofimatica-basica',
 	},
 	{
 		id: 7,
@@ -74,6 +79,7 @@ const categorias = [
 		diasPorSemana: 3,
 		descripcion:
 			'Aprende técnicas para optimizar el consumo energético en el hogar de manera eficiente.',
+		url: 'gestion-de-energia-domestica',
 	},
 	{
 		id: 8,
@@ -85,27 +91,6 @@ const categorias = [
 		diasPorSemana: 2,
 		descripcion:
 			'Curso en línea para aprender las normas de educación vial y seguridad en las vías.',
+		url: 'educacion-vial-en-linea',
 	},
 ];
----
-
-<div class='flex flex-wrap justify-center items-center gap-12
-			max-sm:gap-2'>
-	{
-		categorias.map((categoria) => (
-			<div
-				class=' max-w-[290px] pb-6 overflow-hidden flex flex-col justify-between bg-[#23425e] rounded-lg shadow-xl 
-				hover:cursor-pointer hover:scale-110
-				transition-all ease-out duration-300
-				max-sm:max-w-[210px]'>
-				<img src='INTRODUCCIÓN.png' alt='' class='mb-4 aspect-[500/500]' />
-				<h2
-					class='text-2xl font-bold text-[#f0f0f0] m-4
-							max-sm:text-[16px]'>
-					{categoria.nombre}
-				</h2>
-				<p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>{categoria.descripcion}</p>
-			</div>
-		))
-	}
-</div>

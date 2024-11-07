@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Layout from '../../layouts/Layout.astro';
+import { cursos } from '../../data/cursos.ts';
+export const getStaticPaths = (() => {
+	return cursos.map((curso) => {
+		return {
+			params: {
+				curso: curso.url,
+			},
+		};
+	});
+}) as GetStaticPaths;
+
+const { curso } = Astro.params;
+console.log(curso);
+---
+
+<Layout title=`ConectaT - ${curso}`>
+	<h1 class='text-center'>{curso}</h1>
+</Layout>
