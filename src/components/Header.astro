@@ -10,11 +10,17 @@ import logo from '../../public/logo.png';
 ---
 
 <header class='mt-4 flex justify-around mb-6'>
-	<div class='flex justify-center items-center gap-8'>
-		<Image src={logo} alt='' class='w-[100px] aspect-[500/500]' />
-		<h1 class='text-4xl bold text-[#ffffff]'>ConectaT</h1>
+	<div
+		class='flex justify-center items-center gap-8
+		max-sm:flex-col
+		max-sm:gap-0
+		max-sm:border-[#181441]
+		max-sm:border-r-2 pr-4'>
+		<Image src={logo} alt='' class='w-[100px] aspect-[500/500] max-sm:w-[70px]' />
+		<h1 class='text-4xl bold text-[#ffffff] max-sm:text-2xl'>ConectaT</h1>
 	</div>
-	<nav class='flex justify-center items-center gap-20'>
+	<nav class='flex justify-center items-center gap-20
+	max-sm:gap-3'>
 		{
 			enlaces.map((enlace) => {
 				return (

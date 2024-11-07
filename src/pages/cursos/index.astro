@@ -4,23 +4,24 @@ import { cursos } from '../../data/cursos.ts';
 ---
 
 <Layout title='ConectaT - Cursos'>
-	<div class='flex flex-wrap justify-center items-center gap-12
-			max-sm:gap-2'>
+	<div class='flex flex-wrap justify-center items-center gap-12 w-full
+			max-sm:gap-2
+			max-sm:w-lvw'>
 		{
 			cursos.map((curso) => (
 				<a href={`cursos/${curso.url}`}>
 					<div
-						class=' max-w-[290px] pb-6 overflow-hidden flex flex-col justify-between bg-[#23425e] rounded-lg shadow-xl 
+						class=' max-w-[290px] pb-6 overflow-hidden flex flex-col bg-[#23425e] rounded-lg shadow-xl 
 				hover:cursor-pointer hover:scale-110
 				transition-all ease-out duration-300
-				max-sm:max-w-[210px]'>
-						<img src='INTRODUCCIÓN.png' alt='' class='mb-4 aspect-[500/500]' />
+				max-sm:max-w-[200px]'>
+						<img src={`miniaturas/${curso.img}`} alt='' class='mb-4 aspect-[500/500]' />
 						<h2
-							class='text-2xl font-bold text-[#f0f0f0] m-4
-							max-sm:text-[16px]'>
+							class='text-2xl text-center text-pretty font-bold text-[#f0f0f0] m-4
+							max-sm:text-[12px]'>
 							{curso.nombre}
 						</h2>
-						<p class='text-[#d9d4ff] max-sm:text-[14px] mx-4'>{curso.descripcion}</p>
+						<p class='text-[#d9d4ff] max-sm:text-[12px] mx-4'>{curso.descripcion}</p>
 					</div>
 				</a>
 			))
